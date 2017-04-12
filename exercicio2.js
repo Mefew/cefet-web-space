@@ -18,6 +18,7 @@ document.getElementById('anterior').addEventListener("click", function() {
     else
         index--;
 
+    alert('Proximo');  
     document.getElementById('anterior').previousSibling.src = servidorDasImagens + todasAsImagens[index];
 });
 
@@ -27,5 +28,6 @@ document.getElementById('proximo').addEventListener("click", function() {
     else
         index++;
 
+    alert('Proximo');
     document.getElementById('anterior').previousSibling.src = servidorDasImagens + todasAsImagens[index];
 });
