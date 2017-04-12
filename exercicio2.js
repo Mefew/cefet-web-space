@@ -10,6 +10,22 @@ const servidorDasImagens = 'https://fegemo.github.io/cefet-web/images/',
     'philae-collecting.jpg'
   ];
 
-document.getElementById('anterior').addEventListener("click", function() {
+let index = 0;
 
+document.getElementById('anterior').addEventListener("click", function() {
+    if (index == 0)
+        index=4;
+    else
+        index--;
+
+    document.getElementById('anterior').previousSibling.src = servidorDasImagens + todasAsImagens[index];
+});
+
+document.getElementById('proximo').addEventListener("click", function() {
+    if (index == 4)
+        index=0;
+    else
+        index++;
+
+    document.getElementById('anterior').previousSibling.src = servidorDasImagens + todasAsImagens[index];
 });
